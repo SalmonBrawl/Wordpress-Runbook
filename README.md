@@ -21,3 +21,4 @@ U@ubuntu:~$ ifconfig
 ... inet addr:10.10.10.10...  
 ```
 
+![wordpress_database](https://user-images.githubusercontent.com/73308063/101961862-83be2100-3bbf-11eb-9c4d-8834fd9beb6f.png)
