@@ -22,13 +22,13 @@ U@ubuntu:~$ ifconfig
 U@ubuntu:~$
 ```
 
-### The next phase will involve moving to your desired webserver path and granting permissions to your user.
+### The next phase will involve moving to your desired web server path and granting permissions to your user.
 
 1. Navigate to your webserver's file path. Remember, the shell is kind of like exploring your file explorer but without a graphic interface so you have to type in the things you normally click. This movement will be done with the change directory or "cd" function. To go backwards a directory  you will use "cd .." to go back multiple directories you can use "cd ../../.." the "/.." will send you back an extra directory for each one you enter. You can use "ls" to see the files and folders in your current directory. If we wanted to enter the home folder we would type in "cd home". However if we know where we want to go we can enter the whole filepath as shown next"
 
 2. We know we want to be in /var/www/html/ so we could enter "cd /var/www/html" and it would take us right there. But first we will go to our var by inputting "cd /var" file and add permissions to our user. 
 
-3 We will use the chown command to allow our user permission to manipulate the www directory and the "-R" function will allow us to recursively manipulate anything included within. The Sudo command will grant us administrative privilege on this command to allow it to happen. "sudo chown -R username password"
+3. We will use the chown command to allow our user permission to manipulate the www directory and the "-R" function will allow us to recursively manipulate anything included within. The Sudo command will grant us administrative privilege on this command to allow it to happen. "sudo chown -R username password"
 
 4. We will then navigate into our file with "cd /www/html"
 
