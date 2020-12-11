@@ -230,7 +230,6 @@ U@ubuntu:/var/www/html$
 
 5. To save this file we will hit Ctrl+o then enter. To leave we will press Ctrl+x then enter. Now we will list the files with "ls" and see our new wp-config.php file is inside. We can also see a wp-config-sample.php file that can be removed with "rm wp-config-sample.php" if you choose.
 
-6. Head back to your browser and click on the "run the installation" button. And there you have it. You have your wordpress fully put onto your webserver and ready to be set up.
 
 ```sh
 U@ubuntu:/var/www/html$ cd wordpress
@@ -241,6 +240,7 @@ Ctrl+x to exit
 U@ubuntu:/var/www/html/wordpress$ rm wp-config-sample.php
 ```
 
+6. Head back to your browser and click on the "run the installation" button. And there you have it. You have your wordpress fully put onto your webserver and ready to be set up.
 
 
 ### Congratulations!!!
