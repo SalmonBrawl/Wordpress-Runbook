@@ -1,6 +1,6 @@
 # Wordpress RunBook
 
-## Hello friends, here I will be showing you how to fully install wordpress onto your web server. We will be using Ubuntu 16.04, PHP7.2 and Mysql5.7. For today "..." symbolizes text that is not important to our current goals
+## Hello friends, here I will be showing you how to fully install wordpress onto your web server. We will be using Ubuntu 16.04, PHP 7.2 and MySQL 5.7. For today "..." symbolizes text that is not important to our current goals
 
 ### The first step is to SSH into your server.  
 1. To SSH into your server you need to first find your server's ip address as well as collect the username and password of the server.
@@ -40,7 +40,7 @@ U@ubuntu:/var$ cd /www/html
 U@ubuntu:/var/www/html$
 ```
 
-### Installing PHP and MYSQL, Both are necessary additions for wordpress to function. We will download these through the terminal onto our web server. 
+### Installing PHP and MySQL, Both are necessary additions for wordpress to function. We will download these through the terminal onto our web server. 
 
 #### Remember the sudo command may still be needed even if you have granted your user permission on this directory, any system changes will require a sudo command. So if it asks for permission. Try the same command with "sudo" infront of it. Also make sure to watch as files download. You may be prompted to hit the enter key or type a "y" to continue.
 
