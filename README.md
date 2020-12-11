@@ -18,7 +18,8 @@ C:\Users\SalmonBrawl> ssh U@10.10.10.10
 U@10.10.10.10's password:Pa$$  
 Welcome to _Ubuntu 10.04.6_ LTS...   
 U@ubuntu:~$ ifconfig  
-... inet addr:10.10.10.10...  
+... inet addr:10.10.10.10... 
+U@ubuntu:~$
 ```
 
 ### The next phase will involve moving to your desired webserver path and granting permissions to your user.
@@ -36,7 +37,7 @@ U@ubuntu~$ cd /var
 U@ubuntu:/var$ sudo chown -R U www
 [sudo] password for U: Pa$$
 U@ubuntu:/var$ cd /www/html
-U@ubuntu:/var/www/html
+U@ubuntu:/var/www/html$
 ```
 
 ### Installing PHP and MYSQL, Both are necessary additions for wordpress to function. We will download these through the terminal onto our web server. 
@@ -69,7 +70,8 @@ Reading package lists...
 ... Do you want to continue? [Y/n] y  
 ...Processing triggers  
 U@ubuntu:/var/www/html$ php -var  
-PHP 7.2...  
+PHP 7.2... 
+U@ubuntu:/var/www/html$
 ```
 
 ### Making sure Apache2 has the correct PHP configured.
@@ -123,6 +125,7 @@ mysql.service - MySQL Community Server
 Loaded: loaded ...
 Active: active (running) ...
 ... Started MySQL Community Server.
+U@ubuntu:/var/www/html$
 ```
 
 ### Additional downloads so that PHP works with MySQL
@@ -201,6 +204,7 @@ U@ubuntu:/var/www/html$ ls
 latest.zip wordpress  
 U@ubuntu:/var/www/html$ rm latest.zip
 U@ubuntu:/var/www/html$ sudo service apache2 restart
+U@ubuntu:/var/www/html$
 ```
 
 ### Almost done, now we merge the MySQL with our wordpress.
