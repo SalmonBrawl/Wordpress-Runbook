@@ -53,7 +53,7 @@ U@ubuntu:/var/www/html
 
 5. To double check our work we will enter the "php -v" command which will ideally respond "PHP 7.2..."
 
-sh```
+```sh
 U@ubuntu:/var/www/html$ sudo apt-get update  
 hit1:...
 ...Done  
@@ -84,7 +84,7 @@ PHP 7.2...
 
 5. No we will restart apache2 with the "sudo service apache2 restart" command and then double check the enabled php with "ls /etc/apache2/mods-enabled/php*"
 
-sh```
+```sh
 U@ubuntu:/var/www/html$ ls etc/apache2/mods-enabled/php*  
 /etc/apache2/mods-enabled/php7.0.conf /etc/apache2/mods-enabled/php7.0.load  
 U@ubuntu:/var/www/html$ sudo a2dismod php7.0  
@@ -104,7 +104,7 @@ U@ubuntu:/var/www/html$ ls etc/apache2/mods-enabled/php*
 
 4. To make sure that MYSQL is running we will enter the command "systemctl status mysql.service" The output should say Active:active running If it does then congratulations, if not we can try to manually start it by entering "sudo systemctl start mysql".
 
-sh```
+```sh
 U@ubuntu:/var/www/html$ sudo apt-get update  
 [sudo] password for U: Pa$$  
 Hit:1...
@@ -159,7 +159,7 @@ U@ubuntu:/var/www/html$
 
 5. Then you will enter "quit" to leave MySQL. Remember to check the code below MySQL looks different than your normal terminal, don't worry, it's supposed to.
 
-sh```
+```sh
 U@ubuntu:/var/www/html$ MySQL -u root -p  
 Enter password: Pa$$
 mysql> CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'Pa$$';
@@ -184,7 +184,7 @@ U@ubuntu:/var/www/html$
 
 4. Finally we will restart apache2 with the command "sudo service apache2 restart" Now if you navigate to the server's ip address in your browser, you should see the wordpress folder. If you click on it in your browser you will be able to enter the set up.
 
-sh```
+```sh
 U@ubuntu:/var/www/html$ curl -O https://wordpress.org/latest.zip  
 U@ubuntu:/var/www/html$ ls
 latest.zip  
@@ -219,13 +219,16 @@ U@ubuntu:/var/www/html$ sudo service apache2 restart
  
 3. After we enter in this data and hit submit we will enter a new page that has a text box. This is a configuration file that has been generated for us given the information that was provided in the previous page. We will now copy this information and head back to our terminal.
 
+![wordpress_config](https://user-images.githubusercontent.com/73308063/101962129-29719000-3bc0-11eb-9089-798d8699b1ad.png)
+
+
 4. Back in our terminal we will navigate into our wordpress folder with "cd wordpress" and inside we will use nano editor to create a file called "wp-config.php". We will paste the information we previously copied into it by double right clicking when using windows command prompt terminal. The command to create the file is "sudo nano wp-config.php"
 
 5. To save this file we will hit Ctrl+o then enter. To leave we will press Ctrl+x then enter. Now we will list the files with "ls" and see our new wp-config.php file is inside. We can also see a wp-config-sample.php file that can be removed with "rm wp-config-sample.php" if you choose.
 
 6. Head back to your browser and click on the "run the installation" button. And there you have it. You have your wordpress fully put onto your webserver and ready to be set up.
 
-sh```
+```sh
 U@ubuntu:/var/www/html$ cd wordpress
 U@ubuntu:/var/www/html/wordpress$ sudo nano wp-config.php
 ---Paste your generated configuration here---
