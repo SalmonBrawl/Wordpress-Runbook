@@ -24,23 +24,27 @@ U@ubuntu:~$
 
 ### The next phase will involve moving to your desired web server path and granting permissions to your user.
 
-1. Navigate to your webserver's file path. Remember, the shell is kind of like exploring your file explorer but without a graphic interface so you have to type in the things you normally click. This movement will be done with the change directory or "cd" function. To go backwards a directory  you will use "cd .." to go back multiple directories you can use "cd ../../.." the "/.." will send you back an extra directory for each one you enter. You can use "ls" to see the files and folders in your current directory. If we wanted to enter the home folder we would type in "cd home". However if we know where we want to go we can enter the whole filepath as shown next"
+1. Navigate to your webserver's file path. Remember, the shell is kind of like exploring your file explorer but without a graphic interface so you have to type in the things you normally click. This movement will be done with the change directory or "cd" function. To go backwards a directory  you will use "cd .." to go back multiple directories you can use "cd ../../.." the "/.." will send you back an extra directory for each one you enter. You can use "ls" to see the files and folders in your current directory. If we wanted to enter the "home" folder we would type in "cd home". However if we know where we want to go we can enter the whole filepath as shown next.
 
-2. We know we want to be in /var/www/html/ so we could enter "cd /var/www/html" and it would take us right there. But first we will go to our var by inputting "cd /var" file and add permissions to our user. 
+2. We know we want to be in /var so we could enter "cd /var/www/html" and it would take us right there. If you do not already have /var/www/html you can go to "cd /var" then make the directories to follow. We can acheive this with the mkdir or make directory command. Due to the fact that we need to run this at an administrative level the Sudo command will grant us higher privileges it may ask you to re-enter your password when using sudo. We will enter "sudo mkdir www", then enter it with "cd www", then "sudo mkdir html". Next we will head back to the var folder so we can grant permissions with "cd .." 
 
-3. We will use the chown command to allow our user permission to manipulate the www directory and the "-R" function will allow us to recursively manipulate anything included within. The Sudo command will grant us administrative privilege on this command to allow it to happen. "sudo chown -R username password"
+3. We will use the chown command to allow our user permission to manipulate the www directory and the "-R" function will allow us to recursively manipulate anything included within, our command will look like this. "sudo chown -R username password"
 
 4. We will then navigate into our file with "cd /www/html"
 
 ```sh
 U@ubuntu~$ cd /var
-U@ubuntu:/var$ sudo chown -R U www
+U@ubuntu:/var$ sudo mkdir www
 [sudo] password for U: Pa$$
+U@ubuntu:/var$ cd www
+U@ubuntu:/var/www$ sudo mkdir html
+U@ubuntu:/var/www$ cd ..
+U@ubuntu:/var$ sudo chown -R U www
 U@ubuntu:/var$ cd /www/html
 U@ubuntu:/var/www/html$
 ```
 
-### Installing PHP and MySQL, Both are necessary additions for wordpress to function. We will download these through the terminal onto our web server. 
+### Installing PHP and MySQL, both are necessary additions for wordpress to function. We will download these through the terminal onto our web server. 
 
 #### Remember the sudo command may still be needed even if you have granted your user permission on this directory, any system changes will require a sudo command. So if it asks for permission. Try the same command with "sudo" infront of it. Also make sure to watch as files download. You may be prompted to hit the enter key or type a "y" to continue.
 
