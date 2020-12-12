@@ -26,7 +26,7 @@ U@ubuntu:~$
 
 1. Navigate to your webserver's file path. Remember, the shell is kind of like exploring your file explorer but without a graphic interface so you have to type in the things you normally click. This movement will be done with the change directory or "cd" function. To go backwards a directory  you will use "cd .." to go back multiple directories you can use "cd ../../.." the "/.." will send you back an extra directory for each one you enter. You can use "ls" to see the files and folders in your current directory. If we wanted to enter the "home" folder we would type in "cd home". However if we know where we want to go we can enter the whole filepath as shown next.
 
-2. We know we want to be in /var so we could enter "cd /var/www/html" and it would take us right there. If you do not already have /var/www/html you can go to "cd /var" then make the directories to follow. We can acheive this with the mkdir or make directory command. Due to the fact that we need to run this at an administrative level the Sudo command will grant us higher privileges it may ask you to re-enter your password when using sudo. We will enter "sudo mkdir www", then enter it with "cd www", then "sudo mkdir html". Next we will head back to the var folder so we can grant permissions with "cd .." 
+2. We we want to be in /var/www/html so we could enter "cd /var/www/html" and it would take us right there. If you do not already have /var/www/html from your apache2 set up you can go to "cd /var" then make the directories to follow. We can acheive this with the mkdir or make directory command. Due to the fact that we need to run this at an administrative level the Sudo command will grant us higher privileges it may ask you to re-enter your password when using sudo. We will enter "sudo mkdir www", then enter it with "cd www", then "sudo mkdir html". Next we will head back to the var folder so we can grant permissions with "cd .." 
 
 3. We will use the chown command to allow our user permission to manipulate the www directory and the "-R" function will allow us to recursively manipulate anything included within, our command will look like this. "sudo chown -R username password"
 
@@ -50,7 +50,7 @@ U@ubuntu:/var/www/html$
 
 1. The first step is to perform an update with the "sudo apt-get update" function. It will then prompt you for you password and make sure your server is up to date. It is good practice to update frequently as you proceed.
 
-2. You will now have to retrieve a repository from online. Although it is free to use, opensource tech the repository is hosted by Ondrej Sury. We can get this repository by using the "sudo add-apt-repository ppa:ondrej/php" the ppa:ondrej/php aspect is where this repository is being hosted and the add-apt-repository function collects it. Press enter when prompted
+2. You will now have to retrieve a repository from online. Although it is free to use, the repository is hosted by Ondrej Sury on launchpad. We can get this repository by using the "sudo add-apt-repository ppa:ondrej/php" the ppa:ondrej/php aspect is where this repository is being hosted and the add-apt-repository function collects it. Press enter when prompted
 
 3. We will now update again with "sudo apt-get update"
 
@@ -189,7 +189,7 @@ U@ubuntu:/var/www/html$
 
 3. Now we will unzip the directory by inputting "unzip latest.zip" You will now see the wordpress folder sitting in your folder if you use "ls" again. Let's delete that by using the rm function "rm latest.zip".
 
-4. Finally we will restart apache2 with the command "sudo service apache2 restart" Now if you navigate to the server's ip address in your browser, you should see the wordpress folder. If you click on it in your browser you will be able to enter the set up.
+4. Finally we will restart apache2 with the command "sudo service apache2 restart". Now if you navigate to the server's ip address in your browser, you should see the wordpress folder. If you click on it in your browser you will be able to enter the set up.
 
 ```sh
 U@ubuntu:/var/www/html$ curl -O https://wordpress.org/latest.zip  
@@ -232,7 +232,7 @@ U@ubuntu:/var/www/html$
 
 4. Back in our terminal we will navigate into our wordpress folder with "cd wordpress" and inside we will use nano editor to create a file called "wp-config.php". We will paste the information we previously copied into it by double right clicking when using windows command prompt terminal. The command to create the file is "sudo nano wp-config.php"
 
-5. To save this file we will hit Ctrl+o then enter. To leave we will press Ctrl+x then enter. Now we will list the files with "ls" and see our new wp-config.php file is inside. We can also see a wp-config-sample.php file that can be removed with "rm wp-config-sample.php" if you choose.
+5. To save this file we will hit Ctrl+o then enter. To leave we will press Ctrl+x then enter. Now we will list the files with "ls" and see our new wp-config.php file is inside. We can also see a wp-config-sample.php file that can be removed with "rm wp-config-sample.php" if you choose. And just for fun, we will hit it with one final update, you should have the "sudo apt-get update" etched into your head by now.
 
 
 ```sh
@@ -242,6 +242,7 @@ U@ubuntu:/var/www/html/wordpress$ sudo nano wp-config.php
 Ctrl+o to save
 Ctrl+x to exit
 U@ubuntu:/var/www/html/wordpress$ rm wp-config-sample.php
+U@ubuntu:/var/www/html/wordpress$ sudo apt-get update
 ```
 
 6. Head back to your browser and click on the "run the installation" button. And there you have it. You have your wordpress fully put onto your webserver and ready to be set up.
