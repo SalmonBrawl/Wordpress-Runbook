@@ -232,7 +232,7 @@ U@ubuntu:/var/www/html$
 
 4. Back in our terminal we will navigate into our wordpress folder with "cd wordpress" and inside we will use nano editor to create a file called "wp-config.php". We will paste the information we previously copied into it by double right clicking when using windows command prompt terminal. The command to create the file is "sudo nano wp-config.php"
 
-5. To save this file we will hit Ctrl+o then enter. To leave we will press Ctrl+x then enter. Now we will list the files with "ls" and see our new wp-config.php file is inside. We can also see a wp-config-sample.php file that can be removed with "rm wp-config-sample.php" if you choose. And just for fun, we will hit it with one final update, you should have the "sudo apt-get update" etched into your head by now.
+5. To save this file we will hit Ctrl+o then enter. To leave we will press Ctrl+x then enter. Now we will list the files with "ls" and see our new wp-config.php file is inside. And just for fun, we will hit it with one final update, you should have the "sudo apt-get update" etched into your head by now.
 
 
 ```sh
@@ -241,7 +241,6 @@ U@ubuntu:/var/www/html/wordpress$ sudo nano wp-config.php
 ---Paste your generated configuration here---
 Ctrl+o to save
 Ctrl+x to exit
-U@ubuntu:/var/www/html/wordpress$ rm wp-config-sample.php
 U@ubuntu:/var/www/html/wordpress$ sudo apt-get update
 ```
 
