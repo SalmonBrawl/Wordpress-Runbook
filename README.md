@@ -73,7 +73,7 @@ U@ubuntu:/var/www/html$ sudo apt-get install php7.2
 Reading package lists...  
 ... Do you want to continue? [Y/n] y  
 ...Processing triggers  
-U@ubuntu:/var/www/html$ php -var  
+U@ubuntu:/var/www/html$ php -ver  
 PHP 7.2... 
 U@ubuntu:/var/www/html$
 ```
