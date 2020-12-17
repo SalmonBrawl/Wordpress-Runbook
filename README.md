@@ -156,7 +156,7 @@ U@ubuntu:/var/www/html$
 ### Setting up a database in MySQL
 #### Ok great work so far, now would be a good time to take a quick break, grab a coffee or a top up on your wine then we'll move forward. Next we will be setting up a MySQL database to connect to our wordpress download. This would also be a good time to take a snapshot of your server. An easy place to restart from if some other issues come up.
 
-1. The first step is to enter into MySQL through our terminal. We can do this by following the protocol of "MySQL -u Username -p". Remember that with MySQL the user is root not your Ubuntu username. It will then prompt you for a password which you will enter from when we first installed it.
+1. The first step is to enter into MySQL through our terminal. We can do this by following the protocol of "mysql -u Username -p". Remember that with MySQL the user is root not your Ubuntu username. It will then prompt you for a password which you will enter from when we first installed it.
 
 2. Now that we are inside our MySQL tje first thing we will do is create a user. I will write down the syntax here and you can see practical input in the code area. "CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'password';" 
 
@@ -167,7 +167,7 @@ U@ubuntu:/var/www/html$
 5. Then you will enter "quit" to leave MySQL. Remember to check the code below MySQL looks different than your normal terminal, don't worry, it's supposed to.
 
 ```sh
-U@ubuntu:/var/www/html$ MySQL -u root -p  
+U@ubuntu:/var/www/html$ mysql -u root -p  
 Enter password: Pa$$
 mysql> CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'Pa$$';
 Query OK, 0 rows affected (0.00 sec)  
