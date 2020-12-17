@@ -91,12 +91,12 @@ U@ubuntu:/var/www/html$
 5. No we will restart apache2 with the "sudo service apache2 restart" command and then double check the enabled php with "ls /etc/apache2/mods-enabled/php*"
 
 ```sh
-U@ubuntu:/var/www/html$ ls etc/apache2/mods-enabled/php*  
+U@ubuntu:/var/www/html$ ls /etc/apache2/mods-enabled/php*  
 /etc/apache2/mods-enabled/php7.0.conf /etc/apache2/mods-enabled/php7.0.load  
 U@ubuntu:/var/www/html$ sudo a2dismod php7.0  
 U@ubuntu:/var/www/html$ sudo a2enmod php7.2  
 U@ubuntu:/var/www/html$ sudo service apache2 restart  
-U@ubuntu:/var/www/html$ ls etc/apache2/mods-enabled/php*  
+U@ubuntu:/var/www/html$ ls /etc/apache2/mods-enabled/php*  
 /etc/apache2/mods-enabled/php7.2.conf /etc/apache2/mods-enabled/php7.2.load
 ```
 
